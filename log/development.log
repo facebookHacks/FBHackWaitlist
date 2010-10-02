@@ -1,0 +1,2653 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWaitlists (20101002094629)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "waitlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "phone" varchar(255), "email" varchar(255), "crn" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101002094629')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("waitlists")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 04:47:29) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 04:47:49) [GET]
+
+ActionController::RoutingError (No route matches "/products/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 04:47:51) [GET]
+
+ActionController::RoutingError (No route matches "/product" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 04:48:29) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 04:49:53) [GET]
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 22ms (View: 18, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 04:50:17) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 04:52:26) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 04:52:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Waitlist.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 04:52:56) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 04:53:24) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 04:54:44) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 04:55:04) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 04:56:59) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 05:04:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"Sean", "phone"=>"2173779203", "crn"=>"51747", "email"=>"seanadams9@gmail.com"}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Sean', '2010-10-02 10:04:58', '2010-10-02 10:04:58', '2173779203', '51747', 'seanadams9@gmail.com')[0m
+Redirected to http://localhost:3000/waitlists/1
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:04:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 1) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/1]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:05:03) [GET]
+  [4;35;1mWaitlist Load (0.4ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 05:05:14) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"1"}
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 1) [0m
+  [4;35;1mWaitlist Destroy (49.7ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 276ms (DB: 50) | 302 Found [http://localhost/waitlists/1]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:05:14) [GET]
+  [4;36;1mWaitlist Load (0.4ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:05:21) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:11:13) [GET]
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:11:47) [GET]
+  [4;36;1mWaitlist Load (0.4ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:17:05) [GET]
+  [4;35;1mWaitlist Load (0.4ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:17:27) [GET]
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:17:35) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:17:41) [GET]
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists/]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:18:07) [GET]
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:19:13) [GET]
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:19:26) [GET]
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:19:45) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 05:19:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 10:19:47', '2010-10-02 10:19:47', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/2
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:19:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 2) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/2]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:20:35) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mWaitlist Load (0.1ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Waitlist with ID=show):
+  app/controllers/waitlists_controller.rb:16:in `show'
+
+Rendered rescues/_trace (22.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:22:43) [GET]
+  [4;36;1mWaitlist Load (0.5ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:22:45) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 05:23:32) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 10:23:32', '2010-10-02 10:23:32', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/3
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:23:32) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 3) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/3]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:23:35) [GET]
+  [4;35;1mWaitlist Load (0.6ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:23:38) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 05:23:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 10:23:40', '2010-10-02 10:23:40', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/4
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:23:40) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 4) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/4]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:26:02) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 4) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/4]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:26:10) [GET]
+  [4;35;1mWaitlist Load (0.5ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 05:26:14) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"2"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 2) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/2]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:26:14) [GET]
+  [4;36;1mWaitlist Load (0.5ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 05:26:15) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"3"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 3) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/3]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:26:15) [GET]
+  [4;35;1mWaitlist Load (0.5ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 05:26:16) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"4"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 4) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/4]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:26:16) [GET]
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:26:35) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:29:48) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:31:14) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:32:11) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:32:21) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:32:31) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:32:41) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:32:54) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:33:23) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:33:36) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:38:00) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:38:12) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:41:03) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:41:35) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:41:43) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 05:44:21) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"Dan Kaufman", "phone"=>"3098384631", "crn"=>"45325", "email"=>"kaufman.dan@gmail.com"}}
+  [4;35;1mWaitlist Create (0.6ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan Kaufman', '2010-10-02 10:44:21', '2010-10-02 10:44:21', '3098384631', '45325', 'kaufman.dan@gmail.com')[0m
+Redirected to http://localhost:3000/waitlists/5
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:44:21) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 5) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/5]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 05:44:25) [GET]
+  [4;35;1mWaitlist Load (0.5ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 05:44:28) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 05:44:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"Dan Kaufman", "phone"=>"3098384631", "crn"=>"51471", "email"=>"kaufman.dan@gmail.com"}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan Kaufman', '2010-10-02 10:44:49', '2010-10-02 10:44:49', '3098384631', '51471', 'kaufman.dan@gmail.com')[0m
+Redirected to http://localhost:3000/waitlists/6
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:44:49) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 6) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/waitlists/6]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 05:59:39) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 6) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/6]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 06:05:19) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 6) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/6]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 06:05:23) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 6) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/6]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 06:08:30) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 6) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/6]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 06:11:36) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 6) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/6]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 06:11:38) [GET]
+  [4;35;1mWaitlist Load (0.4ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 06:13:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"Dan Kaufman", "phone"=>"3098384631", "crn"=>"51471", "email"=>"kaufman.dan@gmail.com"}}
+  [4;36;1mWaitlist Create (0.4ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan Kaufman', '2010-10-02 11:13:59', '2010-10-02 11:13:59', '3098384631', '51471', 'kaufman.dan@gmail.com')[0m
+Redirected to http://localhost:3000/waitlists/7
+Completed in 139ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 06:13:59) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 7) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/7]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 11:55:27) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 11:55:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"dan Kaufman", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('dan Kaufman', '2010-10-02 16:55:36', '2010-10-02 16:55:36', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/8
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 11:55:36) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 8) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/8]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 11:55:40) [GET]
+  [4;36;1mWaitlist Load (0.5ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 50ms (View: 47, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 11:55:45) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"8"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 8) [0m
+  [4;36;1mWaitlist Destroy (0.5ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 125ms (DB: 1) | 302 Found [http://localhost/waitlists/8]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 11:55:45) [GET]
+  [4;35;1mWaitlist Load (0.5ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 10ms (View: 7, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 11:55:47) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"7"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 7) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/7]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 11:55:47) [GET]
+  [4;36;1mWaitlist Load (0.4ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 11:55:49) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"6"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 6) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/6]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 11:55:49) [GET]
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 11:55:52) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:03:59) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 46ms (View: 43, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:04:34) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:04:53) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:05:24) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:08:22) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:09:49) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:09:50) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:10:03) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:10:42) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:12:01) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:12:08) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:12:43) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:14:09) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:14:34) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:14:47) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:16:43) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 12:16:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 17:16:54', '2010-10-02 17:16:54', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/9
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 12:16:54) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 9) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/9]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 12:17:00) [GET]
+  [4;36;1mWaitlist Load (0.4ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:17:01) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 12:17:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"Dan Kaufman", "phone"=>"5678", "crn"=>"678", "email"=>"6789"}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan Kaufman', '2010-10-02 17:17:08', '2010-10-02 17:17:08', '5678', '678', '6789')[0m
+Redirected to http://localhost:3000/waitlists/10
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 12:17:08) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 10) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 48ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/10]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 12:17:51) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 10) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/waitlists/10]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 12:17:58) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 10) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/10]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 12:18:07) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 10) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/10]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 12:18:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"Dan Kaufman", "phone"=>"5678", "crn"=>"678", "email"=>"6789"}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan Kaufman', '2010-10-02 17:18:12', '2010-10-02 17:18:12', '5678', '678', '6789')[0m
+Redirected to http://localhost:3000/waitlists/11
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 12:18:12) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 11) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/11]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:20:08) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:20:39) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 51ms (View: 47, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:22:01) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:27:00) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:27:43) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:28:36) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:28:55) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 12:32:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"dan Kaufman", "phone"=>"567", "crn"=>"5678", "email"=>"56789"}}
+  [4;36;1mWaitlist Create (0.4ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('dan Kaufman', '2010-10-02 17:32:45', '2010-10-02 17:32:45', '567', '5678', '56789')[0m
+Redirected to http://localhost:3000/waitlists/12
+Completed in 51ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 12:32:45) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 12) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/12]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:46:11) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 12:46:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.4ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 17:46:33', '2010-10-02 17:46:33', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/13
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 12:46:33) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 13) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/waitlists/13]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:46:35) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:47:17) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 12:47:20) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 49ms (View: 45, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:04:47) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:04:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:04:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 13:04:49) [POST]
+  Parameters: {"confirm.x"=>"10", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"14", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 18:04:49', '2010-10-02 18:04:49', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/14
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 13:04:49) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 14) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/14]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:05:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:07:59) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:07:59) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:07:59) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 13:08:01) [POST]
+  Parameters: {"confirm.x"=>"25", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"2", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 18:08:01', '2010-10-02 18:08:01', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/15
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 13:08:01) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 15) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/waitlists/15]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:08:22) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:08:22) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist/app/views/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:08:22) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist/app/views/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:09:09) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist/app/views/waitlists" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:09:16) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist/app/views/waitlists/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:10:02) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist/waitlists/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:10:24) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:10:30) [GET]
+
+ActionController::RoutingError (No route matches "/test.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:12:48) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:22:34) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:22:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-02 13:22:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:23:18) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 13:23:22) [POST]
+  Parameters: {"confirm.x"=>"111", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"17", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 18:23:22', '2010-10-02 18:23:22', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/16
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 13:23:22) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 16) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/16]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:24) [GET]
+  [4;36;1mWaitlist Load (0.7ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 23ms (View: 19, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 13:23:27) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"16"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 16) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 16[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists/16]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:27) [GET]
+  [4;35;1mWaitlist Load (0.7ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 19ms (View: 15, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 13:23:28) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"15"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 15) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 15[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 46ms (DB: 0) | 302 Found [http://localhost/waitlists/15]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:28) [GET]
+  [4;36;1mWaitlist Load (1.0ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 13:23:30) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"14"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 14) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 14[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/14]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:30) [GET]
+  [4;35;1mWaitlist Load (0.6ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 13:23:31) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"13"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 13) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 13[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/13]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:31) [GET]
+  [4;36;1mWaitlist Load (0.9ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 13:23:32) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"12"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 12) [0m
+  [4;36;1mWaitlist Destroy (0.3ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 12[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists/12]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:32) [GET]
+  [4;35;1mWaitlist Load (0.5ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 13:23:34) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"11"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 11) [0m
+  [4;35;1mWaitlist Destroy (0.3ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 11[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists/11]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:34) [GET]
+  [4;36;1mWaitlist Load (0.7ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 13:23:35) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"10"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 10) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 10[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/10]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:35) [GET]
+  [4;35;1mWaitlist Load (0.5ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 13:23:36) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"9"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 9) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 9[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/9]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:23:36) [GET]
+  [4;36;1mWaitlist Load (0.4ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:23:39) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:26:39) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:26:43) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:26:51) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:27:06) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:27:13) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:27:20) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:27:33) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:28:25) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:28:28) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:28:38) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:30:07) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:30:15) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 13:31:27) [POST]
+  Parameters: {"confirm.x"=>"17", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"6", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 18:31:27', '2010-10-02 18:31:27', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/17
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 13:31:28) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 17) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/17]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 13:31:30) [GET]
+  [4;35;1mWaitlist Load (0.4ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 13:31:53) [POST]
+  Parameters: {"confirm.x"=>"67", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"28", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 18:31:53', '2010-10-02 18:31:53', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/18
+Completed in 88ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 13:31:53) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 18) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/waitlists/18]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 13:33:59) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 18) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/waitlists/18]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 13:35:32) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 18) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/waitlists/18]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:36:14) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 13:39:53) [POST]
+  Parameters: {"confirm.x"=>"95", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"23", "waitlist"=>{"name"=>"Dan Kaufman", "phone"=>"309838", "crn"=>"45325", "email"=>""}}
+  [4;36;1mWaitlist Create (0.4ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan Kaufman', '2010-10-02 18:39:53', '2010-10-02 18:39:53', '309838', '45325', '')[0m
+Redirected to http://localhost:3000/waitlists/19
+Completed in 64ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 13:39:53) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 19) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 233ms (View: 227, DB: 0) | 200 OK [http://localhost/waitlists/19]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:40:33) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 13:42:36) [GET]
+  [4;36;1mWaitlist Load (0.5ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://192.17.109.160/waitlists/]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 13:42:45) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#create (for 192.17.109.69 at 2010-10-02 13:44:58) [POST]
+  Parameters: {"confirm.x"=>"78", "authenticity_token"=>"75idzFsTq4oeC+5d9pKLaSOovkfzfi1V+6bPVk6Xo58=", "confirm.y"=>"19", "waitlist"=>{"name"=>"Jared Lambert", "phone"=>"217-621-3024", "crn"=>"51471", "email"=>"jared.lambert@gmail.com"}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Jared Lambert', '2010-10-02 18:44:58', '2010-10-02 18:44:58', '217-621-3024', '51471', 'jared.lambert@gmail.com')[0m
+Redirected to http://192.17.109.160:3000/waitlists/20
+Completed in 10ms (DB: 0) | 302 Found [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#show (for 192.17.109.69 at 2010-10-02 13:44:58) [GET]
+  Parameters: {"id"=>"20"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 20) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 586ms (View: 580, DB: 0) | 200 OK [http://192.17.109.160/waitlists/20]
+
+
+Processing WaitlistsController#index (for 192.17.109.79 at 2010-10-02 13:45:34) [GET]
+  [4;35;1mWaitlist Load (0.6ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 69ms (View: 64, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#new (for 192.17.109.79 at 2010-10-02 13:45:37) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing ApplicationController#index (for 192.17.106.229 at 2010-10-02 13:45:52) [GET]
+
+ActionController::RoutingError (No route matches "/waitlist" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 13:46:03) [GET]
+  [4;36;1mWaitlist Load (0.5ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 13:46:06) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#index (for 192.17.106.229 at 2010-10-02 13:46:09) [GET]
+  [4;35;1mWaitlist Load (0.6ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 13ms (View: 10, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#new (for 192.17.106.229 at 2010-10-02 13:46:12) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 45ms (View: 41, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#create (for 192.17.106.229 at 2010-10-02 13:46:47) [POST]
+  Parameters: {"confirm.x"=>"0", "authenticity_token"=>"bSILVwN0hrLsmapIDXbVh5765zehzn7p560TwS1E9Kw=", "confirm.y"=>"0", "waitlist"=>{"name"=>"Dan", "phone"=>"F", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan', '2010-10-02 18:46:47', '2010-10-02 18:46:47', 'F', '', '')[0m
+Redirected to http://192.17.109.160:3000/waitlists/21
+Completed in 7ms (DB: 0) | 302 Found [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#show (for 192.17.106.229 at 2010-10-02 13:46:47) [GET]
+  Parameters: {"id"=>"21"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 21) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 52ms (View: 48, DB: 0) | 200 OK [http://192.17.109.160/waitlists/21]
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 13:47:12) [GET]
+  [4;36;1mWaitlist Load (0.7ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#create (for 192.17.106.229 at 2010-10-02 13:47:20) [POST]
+  Parameters: {"confirm.x"=>"111", "authenticity_token"=>"bSILVwN0hrLsmapIDXbVh5765zehzn7p560TwS1E9Kw=", "confirm.y"=>"12", "waitlist"=>{"name"=>"Dan", "phone"=>"F", "crn"=>"51471", "email"=>""}}
+  [4;35;1mWaitlist Create (0.5ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan', '2010-10-02 18:47:20', '2010-10-02 18:47:20', 'F', '51471', '')[0m
+Redirected to http://192.17.109.160:3000/waitlists/22
+Completed in 10ms (DB: 1) | 302 Found [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#show (for 192.17.106.229 at 2010-10-02 13:47:20) [GET]
+  Parameters: {"id"=>"22"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 22) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 275ms (View: 270, DB: 0) | 200 OK [http://192.17.109.160/waitlists/22]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:48:42) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:48:44) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 192.17.109.79 at 2010-10-02 13:48:53) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:48:55) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:49:03) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:49:11) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:50:15) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:51:21) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:51:29) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:52:08) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:52:29) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:53:13) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:53:14) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:53:21) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:53:39) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:53:44) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:54:07) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:54:13) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#show (for 192.17.106.229 at 2010-10-02 13:54:23) [GET]
+  Parameters: {"id"=>"22"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 22) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 288ms (View: 284, DB: 0) | 200 OK [http://192.17.109.160/waitlists/22]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:55:06) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:55:15) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 192.17.106.229 at 2010-10-02 13:55:27) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:56:07) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:56:29) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 192.17.109.79 at 2010-10-02 13:56:29) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:56:48) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 192.17.109.79 at 2010-10-02 13:56:52) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 48ms (View: 44, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:57:09) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:58:01) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:58:09) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 192.17.109.79 at 2010-10-02 13:58:17) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:59:11) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 13:59:48) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 50ms (View: 47, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:01:06) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 14:01:37) [GET]
+  [4;36;1mWaitlist Load (0.7ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing ApplicationController#index (for 192.17.109.69 at 2010-10-02 14:01:38) [GET]
+
+ActionController::RoutingError (No route matches "/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 14:01:56) [GET]
+  [4;35;1mWaitlist Load (0.6ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:01:56) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 14:01:59) [GET]
+  [4;36;1mWaitlist Load (0.6ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:01:59) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 14:02:02) [GET]
+  [4;35;1mWaitlist Load (0.6ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:02:02) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:02:05) [POST]
+  Parameters: {"confirm.x"=>"91", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"24", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:02:05', '2010-10-02 19:02:05', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/23
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:02:05) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 23) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 54ms (View: 49, DB: 0) | 200 OK [http://localhost/waitlists/23]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:02:08) [GET]
+  [4;36;1mWaitlist Load (0.7ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 19ms (View: 15, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:02:08) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:02:48) [POST]
+  Parameters: {"confirm.x"=>"102", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"33", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:02:48', '2010-10-02 19:02:48', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/24
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:02:48) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 24) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 39ms (View: 34, DB: 0) | 200 OK [http://localhost/waitlists/24]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:02:50) [GET]
+  [4;35;1mWaitlist Load (0.9ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:02:50) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:02:54) [GET]
+  [4;36;1mWaitlist Load (0.8ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:02:54) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 14:02:57) [GET]
+  [4;35;1mWaitlist Load (0.7ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:02:57) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:03:20) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:03:21) [POST]
+  Parameters: {"confirm.x"=>"81", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"7", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:03:21', '2010-10-02 19:03:21', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/25
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:03:21) [GET]
+  Parameters: {"id"=>"25"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 25) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 52ms (View: 47, DB: 0) | 200 OK [http://localhost/waitlists/25]
+
+
+Processing WaitlistsController#edit (for 127.0.0.1 at 2010-10-02 14:03:30) [GET]
+  Parameters: {"id"=>"25"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 25) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/edit
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/waitlists/25/edit]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:03:49) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:05:06) [GET]
+  [4;35;1mWaitlist Load (0.8ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 80ms (View: 75, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:05:06) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:05:31) [POST]
+  Parameters: {"confirm.x"=>"78", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"19", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:05:31', '2010-10-02 19:05:31', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/26
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:05:31) [GET]
+  Parameters: {"id"=>"26"}
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 26) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 61ms (View: 55, DB: 0) | 200 OK [http://localhost/waitlists/26]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:05:32) [GET]
+  [4;36;1mWaitlist Load (1.1ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:05:32) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:05:33) [POST]
+  Parameters: {"confirm.x"=>"69", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"29", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:05:33', '2010-10-02 19:05:33', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/27
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:05:33) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 27) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 29ms (View: 25, DB: 0) | 200 OK [http://localhost/waitlists/27]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:05:38) [GET]
+  [4;35;1mWaitlist Load (0.9ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:05:38) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:06:07) [POST]
+  Parameters: {"confirm.x"=>"35", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"28", "waitlist"=>{"name"=>"Dan Kaufman", "phone"=>"3098384631", "crn"=>"51471", "email"=>"kaufman.dan@gmail.com"}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan Kaufman', '2010-10-02 19:06:07', '2010-10-02 19:06:07', '3098384631', '51471', 'kaufman.dan@gmail.com')[0m
+Redirected to http://localhost:3000/waitlists/28
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:06:07) [GET]
+  Parameters: {"id"=>"28"}
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 28) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 560ms (View: 552, DB: 0) | 200 OK [http://localhost/waitlists/28]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:06:21) [GET]
+  [4;36;1mWaitlist Load (1.0ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 87ms (View: 82, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:06:21) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:07:26) [POST]
+  Parameters: {"confirm.x"=>"50", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"11", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;35;1mWaitlist Create (0.5ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:07:26', '2010-10-02 19:07:26', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/29
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:07:26) [GET]
+  Parameters: {"id"=>"29"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 29) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 51ms (View: 46, DB: 0) | 200 OK [http://localhost/waitlists/29]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:07:29) [GET]
+  [4;35;1mWaitlist Load (1.1ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 86ms (View: 81, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:07:29) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:09:12) [POST]
+  Parameters: {"confirm.x"=>"77", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"9", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:09:12', '2010-10-02 19:09:12', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/30
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:09:12) [GET]
+  Parameters: {"id"=>"30"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 30) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 55ms (View: 50, DB: 0) | 200 OK [http://localhost/waitlists/30]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:12:43) [GET]
+  [4;36;1mWaitlist Load (1.2ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 40ms (View: 35, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:12:43) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:12:46) [POST]
+  Parameters: {"confirm.x"=>"48", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"31", "waitlist"=>{"name"=>"ad", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('ad', '2010-10-02 19:12:46', '2010-10-02 19:12:46', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/31
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:12:46) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 31) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 55ms (View: 49, DB: 0) | 200 OK [http://localhost/waitlists/31]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:12:47) [GET]
+  [4;35;1mWaitlist Load (1.4ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 42ms (View: 35, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:12:47) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:13:07) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:13:07) [POST]
+  Parameters: {"confirm.x"=>"74", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"29", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:13:07', '2010-10-02 19:13:07', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/32
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:13:07) [GET]
+  Parameters: {"id"=>"32"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 32) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 33ms (View: 28, DB: 0) | 200 OK [http://localhost/waitlists/32]
+
+
+Processing WaitlistsController#waitlists (for 127.0.0.1 at 2010-10-02 14:13:07) [GET]
+  Parameters: {"id"=>"new"}
+
+ActionController::UnknownAction (No action responded to waitlists. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:14:00) [GET]
+  Parameters: {"id"=>"32"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 32) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://localhost/waitlists/32]
+
+
+Processing WaitlistsController#waitlists (for 127.0.0.1 at 2010-10-02 14:14:00) [GET]
+  Parameters: {"id"=>"new"}
+
+ActionController::UnknownAction (No action responded to waitlists. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:14:20) [GET]
+  Parameters: {"id"=>"32"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 32) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 34ms (View: 29, DB: 0) | 200 OK [http://localhost/waitlists/32]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:14:20) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 67ms (View: 63, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 14:14:22) [GET]
+  [4;36;1mWaitlist Load (1.2ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 38ms (View: 34, DB: 1) | 200 OK [http://192.17.109.160/waitlists/]
+
+
+Processing WaitlistsController#waitlists (for 192.17.109.69 at 2010-10-02 14:14:23) [GET]
+  Parameters: {"id"=>"new"}
+
+ActionController::UnknownAction (No action responded to waitlists. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#waitlists (for 192.17.109.69 at 2010-10-02 14:14:29) [GET]
+  Parameters: {"id"=>"new"}
+
+ActionController::UnknownAction (No action responded to waitlists. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:14:33) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#index (for 192.17.109.69 at 2010-10-02 14:14:38) [GET]
+  [4;35;1mWaitlist Load (1.1ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 35ms (View: 31, DB: 1) | 200 OK [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:14:38) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:14:38) [GET]
+  [4;36;1mWaitlist Load (1.1ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 71ms (View: 67, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:14:38) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:14:39) [POST]
+  Parameters: {"confirm.x"=>"54", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"7", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"", "email"=>""}}
+  [4;35;1mWaitlist Create (0.4ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:14:39', '2010-10-02 19:14:39', '', '', '')[0m
+Redirected to http://localhost:3000/waitlists/33
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:14:39) [GET]
+  Parameters: {"id"=>"33"}
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 33) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 37ms (View: 31, DB: 0) | 200 OK [http://localhost/waitlists/33]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:14:39) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 192.17.109.69 at 2010-10-02 14:18:40) [POST]
+  Parameters: {"confirm.x"=>"121", "authenticity_token"=>"75idzFsTq4oeC+5d9pKLaSOovkfzfi1V+6bPVk6Xo58=", "confirm.y"=>"30", "waitlist"=>{"name"=>"hjg", "phone"=>"897", "crn"=>"45325", "email"=>"jared.lambert@gmail.com"}}
+  [4;35;1mWaitlist Create (0.3ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('hjg', '2010-10-02 19:18:40', '2010-10-02 19:18:40', '897', '45325', 'jared.lambert@gmail.com')[0m
+Redirected to http://192.17.109.160:3000/waitlists/34
+Completed in 11ms (DB: 0) | 302 Found [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#show (for 192.17.109.69 at 2010-10-02 14:18:41) [GET]
+  Parameters: {"id"=>"34"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 34) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 481ms (View: 476, DB: 0) | 200 OK [http://192.17.109.160/waitlists/34]
+
+
+Processing WaitlistsController#new (for 192.17.109.69 at 2010-10-02 14:18:41) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#new (for 192.17.106.229 at 2010-10-02 14:19:39) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#create (for 192.17.106.229 at 2010-10-02 14:19:58) [POST]
+  Parameters: {"confirm.x"=>"81", "authenticity_token"=>"bSILVwN0hrLsmapIDXbVh5765zehzn7p560TwS1E9Kw=", "confirm.y"=>"15", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"51471", "email"=>""}}
+  [4;35;1mWaitlist Create (0.4ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:19:58', '2010-10-02 19:19:58', '', '51471', '')[0m
+Redirected to http://192.17.109.160:3000/waitlists/35
+Completed in 10ms (DB: 0) | 302 Found [http://192.17.109.160/waitlists]
+
+
+Processing WaitlistsController#show (for 192.17.106.229 at 2010-10-02 14:19:58) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 35) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 492ms (View: 486, DB: 0) | 200 OK [http://192.17.109.160/waitlists/35]
+
+
+Processing WaitlistsController#new (for 192.17.106.229 at 2010-10-02 14:19:59) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://192.17.109.160/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:20:08) [POST]
+  Parameters: {"confirm.x"=>"61", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"12", "waitlist"=>{"name"=>"", "phone"=>"", "crn"=>"51471", "email"=>""}}
+  [4;35;1mWaitlist Create (0.4ms)[0m   [0mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('', '2010-10-02 19:20:08', '2010-10-02 19:20:08', '', '51471', '')[0m
+Redirected to http://localhost:3000/waitlists/36
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:20:08) [GET]
+  Parameters: {"id"=>"36"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 36) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 441ms (View: 437, DB: 0) | 200 OK [http://localhost/waitlists/36]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:20:08) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:20:55) [GET]
+  Parameters: {"id"=>"36"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 36) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 426ms (View: 421, DB: 0) | 200 OK [http://localhost/waitlists/36]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:20:56) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:22:49) [GET]
+  Parameters: {"id"=>"36"}
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 36) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 478ms (View: 472, DB: 0) | 200 OK [http://localhost/waitlists/36]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:24:36) [GET]
+  Parameters: {"id"=>"36"}
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 36) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 604ms (View: 597, DB: 0) | 200 OK [http://localhost/waitlists/36]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:31:20) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:22) [GET]
+  [4;36;1mWaitlist Load (1.4ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 104ms (View: 99, DB: 1) | 200 OK [http://localhost/waitlists/]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:25) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"17"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 17) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 17[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/17]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:25) [GET]
+  [4;35;1mWaitlist Load (1.3ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 44ms (View: 38, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:26) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"18"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 18) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 18[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/waitlists/18]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:26) [GET]
+  [4;36;1mWaitlist Load (1.2ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 76ms (View: 71, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:26) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"20"}
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 20) [0m
+  [4;36;1mWaitlist Destroy (0.4ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 20[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/waitlists/20]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:26) [GET]
+  [4;35;1mWaitlist Load (1.0ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 36ms (View: 32, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:27) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"21"}
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 21) [0m
+  [4;35;1mWaitlist Destroy (0.3ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 21[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/waitlists/21]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:27) [GET]
+  [4;36;1mWaitlist Load (1.4ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 37ms (View: 32, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:27) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"21"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 21) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Waitlist with ID=21):
+  app/controllers/waitlists_controller.rb:77:in `destroy'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:31) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"21"}
+  [4;36;1mWaitlist Load (0.1ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 21) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Waitlist with ID=21):
+  app/controllers/waitlists_controller.rb:77:in `destroy'
+
+Rendered rescues/_trace (24.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:41) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"22"}
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 22) [0m
+  [4;36;1mWaitlist Destroy (0.3ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 22[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/waitlists/22]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:41) [GET]
+  [4;35;1mWaitlist Load (0.9ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 32ms (View: 28, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:42) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"24"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 24) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 24[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/24]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:42) [GET]
+  [4;36;1mWaitlist Load (1.0ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 31ms (View: 26, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:43) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"25"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 25) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 25[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists/25]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:43) [GET]
+  [4;35;1mWaitlist Load (0.9ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 29ms (View: 25, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:45) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"23"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 23) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 23[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/23]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:45) [GET]
+  [4;36;1mWaitlist Load (0.9ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:46) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"26"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 26) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 26[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/26]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:46) [GET]
+  [4;35;1mWaitlist Load (1.3ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:47) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"27"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 27) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 27[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/waitlists/27]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:47) [GET]
+  [4;36;1mWaitlist Load (0.8ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 68ms (View: 63, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:48) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"28"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 28) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 28[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists/28]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:48) [GET]
+  [4;35;1mWaitlist Load (1.1ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:50) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"29"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 29) [0m
+  [4;35;1mWaitlist Destroy (0.2ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 29[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists/29]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:50) [GET]
+  [4;36;1mWaitlist Load (0.7ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:51) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"30"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 30) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 30[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists/30]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:51) [GET]
+  [4;35;1mWaitlist Load (0.8ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:52) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"31"}
+  [4;36;1mWaitlist Load (0.3ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 31) [0m
+  [4;35;1mWaitlist Destroy (0.3ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 31[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/waitlists/31]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:52) [GET]
+  [4;36;1mWaitlist Load (0.5ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:53) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"32"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 32) [0m
+  [4;36;1mWaitlist Destroy (0.2ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 32[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists/32]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:53) [GET]
+  [4;35;1mWaitlist Load (0.6ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:53) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"33"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 33) [0m
+  [4;35;1mWaitlist Destroy (0.4ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 33[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 48ms (DB: 1) | 302 Found [http://localhost/waitlists/33]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:54) [GET]
+  [4;36;1mWaitlist Load (0.5ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:54) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"35"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 35) [0m
+  [4;36;1mWaitlist Destroy (0.4ms)[0m   [0;1mDELETE FROM "waitlists" WHERE "id" = 35[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/waitlists/35]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:54) [GET]
+  [4;35;1mWaitlist Load (0.4ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#destroy (for 127.0.0.1 at 2010-10-02 14:31:55) [DELETE]
+  Parameters: {"authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "id"=>"36"}
+  [4;36;1mWaitlist Load (0.2ms)[0m   [0;1mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 36) [0m
+  [4;35;1mWaitlist Destroy (0.3ms)[0m   [0mDELETE FROM "waitlists" WHERE "id" = 36[0m
+Redirected to http://localhost:3000/waitlists
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/waitlists/36]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:31:55) [GET]
+  [4;36;1mWaitlist Load (0.5ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:32:41) [GET]
+  [4;35;1mWaitlist Load (0.3ms)[0m   [0mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/waitlists]
+
+
+Processing WaitlistsController#new (for 127.0.0.1 at 2010-10-02 14:32:41) [GET]
+Rendering template within layouts/waitlists
+Rendering waitlists/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/waitlists/new]
+
+
+Processing WaitlistsController#create (for 127.0.0.1 at 2010-10-02 14:35:32) [POST]
+  Parameters: {"confirm.x"=>"91", "authenticity_token"=>"YeBcBcRcI/inPEPnPMv7dn1UgTnueAqkB/K2CBPuEfc=", "confirm.y"=>"14", "waitlist"=>{"name"=>"Dan Kaufman", "phone"=>"3098384631", "crn"=>"45325", "email"=>"kaufman.dan@gmail.com"}}
+  [4;36;1mWaitlist Create (0.3ms)[0m   [0;1mINSERT INTO "waitlists" ("name", "created_at", "updated_at", "phone", "crn", "email") VALUES('Dan Kaufman', '2010-10-02 19:35:32', '2010-10-02 19:35:32', '3098384631', '45325', 'kaufman.dan@gmail.com')[0m
+Redirected to http://localhost:3000/waitlists/37
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/waitlists]
+
+
+Processing WaitlistsController#show (for 127.0.0.1 at 2010-10-02 14:35:32) [GET]
+  Parameters: {"id"=>"37"}
+  [4;35;1mWaitlist Load (0.2ms)[0m   [0mSELECT * FROM "waitlists" WHERE ("waitlists"."id" = 37) [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/show
+Completed in 549ms (View: 545, DB: 0) | 200 OK [http://localhost/waitlists/37]
+
+
+Processing WaitlistsController#index (for 127.0.0.1 at 2010-10-02 14:37:53) [GET]
+  [4;36;1mWaitlist Load (0.4ms)[0m   [0;1mSELECT * FROM "waitlists" [0m
+Rendering template within layouts/waitlists
+Rendering waitlists/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/waitlists/]
+
+
+Processing WaitlistsController#waitlists (for 127.0.0.1 at 2010-10-02 14:37:54) [GET]
+  Parameters: {"id"=>"new"}
+
+ActionController::UnknownAction (No action responded to waitlists. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)

@@ -1,0 +1,60 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<table border ="0" width = 560>
+<tr>
+<td>
+<p1 align = "justify"><b>Welcome to Waitlist! Tired of constantly checking if that
+ class you wanted to register for is still full or not? Enter
+ the CRN of the course and we will send you an email and text
+ the second a spot opens up!</b></p1>
+</td>
+</tr>
+</table>
+<center>
+
+
+<% form_for(@waitlist) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+   <span style = "padding-right:2px">
+   <b> <%= f.label :name %></b>
+    <%= f.text_field :name %>
+    &nbsp
+  </p>
+  <p>
+    <span style="padding-right:7px">
+    <b><%= f.label :phone %></b>
+    <%= f.text_field :phone %>
+    &nbsp
+</p>
+  <p>
+    <span style="padding-right:5px">	
+    <b><%= f.label :email %></b>
+    <%= f.text_field :email %>
+    &nbsp  
+</p>
+  <p>
+    <b><%= f.label :crn  %></b> 	
+    <%= f.text_field :crn %>
+  </p>
+  <p>
+    <%= image_submit_tag "button.png", :name => "confirm" %>
+  </p>
+<% end %>
+
+
